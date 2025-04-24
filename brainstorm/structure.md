@@ -1,4 +1,3 @@
-/*
 - Unit 10 Databases - model to reference for MongoDB
 
 - Webpack (Dev Environment)
@@ -30,4 +29,3 @@
                 - App.jsx
                 - index.js
                 - styles.css
-*/

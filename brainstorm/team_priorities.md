@@ -1,4 +1,3 @@
-/*
 Daniel
 Strength - Organization of ideation
 Growth - Attention to detail
@@ -10,9 +9,9 @@ Growth - Tied with Strength, willing to throw down for any topic
 Thin Thin
 Strength - Openness to any topic
 Growth - Would like to be more verbal
-*/
 
-/*
+
+
 - Extension/app for your phone that helps you stay on task
     Option to play/pause music that plays while focusing
     Reward system - bird feeder - longer you stay on task, refill the bird seed, birds come and eat it as a reward system

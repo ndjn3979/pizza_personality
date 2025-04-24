@@ -7,11 +7,14 @@
 - Connected questions > answers to traits
 
 4/23 Wed
-- Git repository 
+- Git repository + branches created
 - Created basic folders structure
 - Installed Dependencies:
     - Webpack
     - Babel for JSX and ES6
     - React
+    - React-DOM
+    - Express
+    - Path
     - HTML Webpack Plugin
     - CSS Support

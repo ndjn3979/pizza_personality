@@ -1,4 +1,3 @@
-/*
 - Are you a morning or an evening person?
         - morning - Reliable / Leader / Intellectual
         - evening - Bold / Adventurous / Rebel
@@ -75,4 +74,3 @@
         - Cochella - Down to earth, I want to hear everything - Adventurous / Trendy / Spicy
         - Space - My soul is from the future - Intellectual / Leader / Fancy
         - Couch - this is where I belong - Comfort-seeker / Rebel / Old Soul
-*/
