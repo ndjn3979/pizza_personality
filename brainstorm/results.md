@@ -1,4 +1,3 @@
-/*
 - Plain cheese
 - All Pepperoni
 - Supreme
@@ -18,7 +17,6 @@
 - Mexican Pizza
 - Anchovy Pizza
 - Ricotta Garlic Pizza
-*/
 
 The Classics (Reliable, Chill, Low-Drama)
 These people are comforting, consistent, and secretly everyone’s favorite.
