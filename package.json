@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack server --mode development --open"
+    "start": "npx webpack serve --mode development --open"
   },
   "keywords": [],
   "author": "",
