@@ -5,7 +5,7 @@ import Questions from "./components/Question"; // Michal
 import Results from './components/Results'; // Michal
 import questionsData from './data/questions.json';
 import resultsData from './data/results.json';
-// import './styles.css'; // Thin Thin
+import './styles.css'; // Thin Thin
 
 const App = () => {
   // State to track current question index, initialized to 0 (first question)
