@@ -1,0 +1,125 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  #root {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styles */
+  h1 {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+  
+  /* Question Card Styles */
+  .question-container {
+    background-color: #fff9f9;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #e74c3c;
+  }
+  
+  .question-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #34495e;
+  }
+  
+  /* Answer Options Styles */
+  .answer-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .answer-option {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .answer-option:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+  }
+  
+  /* For the JSON output (temporary) */
+  .json-output {
+    font-family: monospace;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+/* Animation Styles */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .question-card {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Pizza-themed decorations */
+  .pizza-icon {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #e74c3c;
+  }
+  
+  /* Progress indicator */
+  .progress-bar {
+    height: 5px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+  }
