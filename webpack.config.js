@@ -24,7 +24,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-<<<<<<< HEAD
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
@@ -47,35 +46,5 @@ module.exports = {
     new HtmlWebpackPlugin({ // Creates an instance of HtmlWebpackPlugin
       template: './src/index.html' // Uses './src/index.html' as a template for generating the final HTML file
     }) // Automatically injects the bundled JavaScript into this HTML file
-=======
-        },
-      },
-      // Add these new rules for CSS handling
-      {
-        test: /\.css$/i,
-        use: [
-          'style-loader', // Injects CSS into the DOM
-          'css-loader',   // Turns CSS into CommonJS modules
-        ],
-      },
-      // Optional: Add this if you want to handle other assets
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  devServer: {
-    static: './dist',
-    hot: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html')
-    })
->>>>>>> origin/ui_ux
   ]
 };

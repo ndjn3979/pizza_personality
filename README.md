@@ -20,6 +20,8 @@
     - CSS Support
 
 4/24 Thur
+
+Daniel
 - Reviewed webpack.config.js
     - added "mode: 'development'"
     - added "historyApiFallback" under devServer
@@ -39,5 +41,15 @@
             - Each answer has associated traits
             - We count how many times each trait appears across all answers
             - Each pizza has its own set of traits
-            - We give each pizza a score based on how many of its traits match the user's trait counts
+            - We give each pizza a score based on how many of the user's trait counts match the pizza's traits
             - The pizza with the highest score becomes the result
+
+Thin Thin
+- Created CSS file and imported to App.js
+    - used little effect for design
+- For testing purposes, added code to Question.js
+    - Added pizza icon and a button for answering questions
+
+Michal
+- Attempted refactor of dev environment tech for missing babel tech
+- Worked on Question.jsx
