@@ -18,3 +18,26 @@
     - Path
     - HTML Webpack Plugin
     - CSS Support
+
+4/24 Thur
+- Reviewed webpack.config.js
+    - added "mode: 'development'"
+    - added "historyApiFallback" under devServer
+    - added rules to handle .css and image files
+    - added explanation regarding HtmlWebpackPlugin
+- Reviewed index.js
+    - functional as is, I don't think it needs additions
+- Fixed results.json
+    - previous version only had 3 traits per result
+    - some of the traits were incorrect
+- Decided to incorporate controller/questionsController.js directly into App.js
+    - logic behind this website is relatively simple, so I figured it didn't need the extra middleware
+- Started work on App.js
+    - used Michal's suggestion about useState as the basis for the foundation
+    - realized that this would probably overlap with Michal's work by the time I got some progress
+    - logic for calculating results (probably not the most efficient, but it's reliable):
+            - Each answer has associated traits
+            - We count how many times each trait appears across all answers
+            - Each pizza has its own set of traits
+            - We give each pizza a score based on how many of its traits match the user's trait counts
+            - The pizza with the highest score becomes the result

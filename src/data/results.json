@@ -1,98 +1,98 @@
 [
   {
     "name": "Plain Cheese",
-    "traits": ["Minimalist", "Reliable", "Comfort-Seeker"],
+    "traits": ["Reliable", "Minimalist", "Comfort-Seeker", "Old Soul"],
     "description": "The minimalist. Quiet confidence, always dependable."
   },
   {
     "name": "All Pepperoni",
-    "traits": ["Bold", "Reliable", "Leader"],
-    "description": "Straightforward and bold. Doesn’t overthink it, gets things done."
-  },
-  {
-    "name": "Margherita",
-    "traits": ["Chill", "Fancy", "Minimalist"],
-    "description": "Elegant and artsy. Values aesthetics and chill vibes."
-  },
-  {
-    "name": "White",
-    "traits": ["Chill", "Intellectual", "Minimalist"],
-    "description": "Low-key intellectual. Likes candlelight, books, and chill playlists."
+    "traits": ["Bold", "Reliable", "Spicy", "Leader"],
+    "description": "Straightforward and bold. Doesn't overthink it, gets things done."
   },
   {
     "name": "Supreme",
-    "traits": ["Leader", "Bold", "Intellectual"],
+    "traits": ["Leader", "Bold", "Adventurous", "Intellectual"],
     "description": "The leader. Balanced, experienced, always has opinions."
   },
   {
-    "name": "Mexican Pizza",
-    "traits": ["Bold", "Spicy", "Adventurous"],
-    "description": "Spicy, energetic, party starter. Probably DJ’ed a house party."
-  },
-  {
-    "name": "BBQ Chicken",
-    "traits": ["Spicy", "Trendy", "Rebel"],
-    "description": "Cool and confident with just a bit of a wild streak."
-  },
-  {
-    "name": "KBBQ Bulgogi + Sweet Potato Crust",
-    "traits": ["Trendy", "Fancy", "Leader"],
-    "description": "Trendsetter. Eats fusion before it’s cool."
-  },
-  {
-    "name": "Anchovy Pizza",
-    "traits": ["Edgy", "Rebel", "Bold"],
-    "description": "Hot take personified. Either a genius or a menace."
-  },
-  {
-    "name": "Meat Lover’s",
-    "traits": ["Spicy", "Comfort-Seeker", "Bold"],
+    "name": "Meat Lover's",
+    "traits": ["Chaotic", "Comfort-Seeker", "Bold", "Edgy"],
     "description": "Gym bro energy. Possibly owns an air fryer and uses it aggressively."
   },
   {
-    "name": "Mac & Cheese Pizza",
-    "traits": ["Comfort-Seeker", "Sweet-hearted", "Chill"],
-    "description": "Comfort gremlin. Brings a blanket everywhere."
+    "name": "Hawaiian",
+    "traits": ["Rebel", "Sweet-Hearted", "Quirky", "Adventurous"],
+    "description": "The sweet rebel. Hated by many, loved by the brave."
+  },
+  {
+    "name": "Veggie Lover's",
+    "traits": ["Quirky", "Chill", "Sweet-Hearted", "Independent"],
+    "description": "Eco-conscious. Probably knows their zodiac and your rising sign."
+  },
+  {
+    "name": "Margherita",
+    "traits": ["Chill", "Minimalist", "Intellectual", "Fancy"],
+    "description": "Elegant and artsy. Values aesthetics and chill vibes."
+  },
+  {
+    "name": "BBQ Chicken",
+    "traits": ["Bold", "Trendy", "Spicy", "Leader"],
+    "description": "Cool and confident with just a bit of a wild streak."
+  },
+  {
+    "name": "Shrimp Scampi",
+    "traits": ["Fancy", "Intellectual", "Trendy", "Independent"],
+    "description": "Unexpectedly fancy. Could be a secret millionaire or just pretends really well."
+  },
+  {
+    "name": "White",
+    "traits": ["Intellectual", "Minimalist", "Chill", "Old Soul"],
+    "description": "Low-key intellectual. Likes candlelight, books, and chill playlists."
+  },
+  {
+    "name": "Pesto",
+    "traits": ["Quirky", "Fancy", "Trendy", "Sweet-Hearted"],
+    "description": "Quirky and underrated. Likes rainy days and funky socks."
+  },
+  {
+    "name": "Cheesecake",
+    "traits": ["Sweet-Hearted", "Chaotic", "Comfort-Seeker", "Fancy"],
+    "description": "Sweet but dramatic. Definitely has a Finsta."
   },
   {
     "name": "Chocolate Oreo Pizza",
-    "traits": ["Chaotic", "Quirky", "Sweet-hearted"],
+    "traits": ["Chaotic", "Sweet-Hearted", "Quirky", "Rebel"],
     "description": "Sugar-fueled chaos goblin. Posts memes at 3 AM."
   },
   {
     "name": "Apple Pie",
-    "traits": ["Sweet-hearted", "Fancy", "Chaotic"],
+    "traits": ["Old Soul", "Comfort-Seeker", "Sweet-Hearted", "Quirky"],
     "description": "Cottagecore but unhinged. Bakes and starts cults."
   },
   {
-    "name": "Cheesecake",
-    "traits": ["Sweet-hearted", "Fancy", "Dramatic"],
-    "description": "Sweet but dramatic. Definitely has a Finsta."
+    "name": "KBBQ Bulgogi + Sweet Potato Crust",
+    "traits": ["Trendy", "Adventurous", "Fancy", "Bold"],
+    "description": "Trendsetter. Eats fusion before it's cool."
   },
   {
-    "name": "Veggie Lover’s",
-    "traits": ["Eco-conscious", "Intellectual", "Sweet-hearted"],
-    "description": "Eco-conscious. Probably knows their zodiac and your rising sign."
+    "name": "Mac & Cheese Pizza",
+    "traits": ["Comfort-Seeker", "Chaotic", "Old Soul", "Quirky"],
+    "description": "Comfort gremlin. Brings a blanket everywhere."
   },
   {
-    "name": "Pesto",
-    "traits": ["Quirky", "Minimalist", "Chill"],
-    "description": "Quirky and underrated. Likes rainy days and funky socks."
+    "name": "Mexican Pizza",
+    "traits": ["Spicy", "Adventurous", "Bold", "Chaotic"],
+    "description": "Spicy, energetic, party starter. Probably DJ'ed a house party."
   },
   {
-    "name": "Ricotta Garlic",
-    "traits": ["Sensual", "Intellectual", "Introvert"],
+    "name": "Anchovy Pizza",
+    "traits": ["Edgy", "Independent", "Rebel", "Intellectual"],
+    "description": "Hot take personified. Either a genius or a menace."
+  },
+  {
+    "name": "Ricotta Garlic Pizza",
+    "traits": ["Fancy", "Intellectual", "Sweet-Hearted", "Chill"],
     "description": "Sensual introvert. Talks slow, thinks deep, cooks good pasta."
-  },
-  {
-    "name": "Shrimp Scampi",
-    "traits": ["Fancy", "Unexpected", "Independent"],
-    "description": "Unexpectedly fancy. Could be a secret millionaire or just pretends really well."
-  },
-  {
-    "name": "Hawaiian",
-    "traits": ["Sweet-hearted", "Rebel", "Bold"],
-    "description": "The sweet rebel. Hated by many, loved by the brave."
   }
 ]
 
