@@ -46,10 +46,16 @@ const QuestionRenderer = () => {
           ? 'Your Pizza Personality Results 🍕'
           : 'Pizza Personality Test'}
       </h1>
-      <div className='progress-bar'>
-        <div className='progress' style={{ width: '25%' }}></div>
-      </div>
-
+      {/* fixed progress bar thin thin */}
+      <div className="progress-bar">
+                <div 
+                    className="progress" 
+                    style={{ 
+                        width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` 
+                    }} 
+                />
+            </div>
+            
       <div className='question-container'>
         <h2>Sample Question</h2>
         <div className='question-text'>
@@ -68,9 +74,10 @@ const QuestionRenderer = () => {
           ))}
         </div>
       </div>
+      
 
       {/* Temporary JSON output - remove in production */}
-      <div className='json-output'>Debug: {JSON.stringify(answersOnly)}</div>
+      Progress: {currentQuestionIndex + 1}/{questions.length}
     </div>
   );
 };

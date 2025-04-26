@@ -1,125 +1,221 @@
 /* Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-  }
-  
-  #root {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Header Styles */
-  h1 {
-    color: #e74c3c;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #e74c3c;
-    padding-bottom: 8px;
-    display: inline-block;
-  }
-  
-  /* Question Card Styles */
-  .question-container {
-    background-color: #fff9f9;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    border-left: 5px solid #e74c3c;
-  }
-  
-  .question-text {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #34495e;
-  }
-  
-  /* Answer Options Styles */
-  .answer-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .answer-option {
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    font-size: 1rem;
-  }
-  
-  .answer-option:hover {
-    background-color: #c0392b;
-    transform: translateY(-2px);
-  }
-  
-  /* For the JSON output (temporary) */
-  .json-output {
-    font-family: monospace;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #333;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h1 {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+/* Question Card Styles */
+.question-container {
+  background-color: #fff9f9;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #e74c3c;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+/* Answer Options Styles - Updated */
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  width: 60%;
+}
+
+.answer-option {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.answer-option:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* For the JSON output (temporary) */
+.json-output {
+  font-family: monospace;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
 /* Animation Styles */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.question-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Pizza-themed decorations */
+.pizza-icon {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #e74c3c;
+}
+
+/* Progress indicator */
+.progress-bar {
+  height: 5px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+/* End message styling */
+.end-message {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 30px;
+  color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2rem;
   }
   
-  .question-card {
-    animation: fadeIn 0.5s ease-out forwards;
+  .question-container {
+      padding: 20px;
   }
   
-  /* Pizza-themed decorations */
-  .pizza-icon {
-    display: block;
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #e74c3c;
+  .answer-options {
+      gap: 10px;
+  }
+}
+
+/* Button click animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.answer-option:active {
+  animation: pulse 0.3s ease;
+}
+/* Results Page Styles */
+.results-container {
+  margin-top: 30px;
+}
+
+.result-card {
+  background-color: #fff9f9;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 5px solid #e74c3c;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-card h2 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+  border-bottom: none;
+}
+
+.result-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #34495e;
+}
+
+.pizza-icon.small {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+}
+
+.no-results {
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.no-results p {
+  margin-bottom: 15px;
+}
+
+/* Add this to your existing media queries */
+@media (max-width: 600px) {
+  .result-card {
+      padding: 20px;
   }
   
-  /* Progress indicator */
-  .progress-bar {
-    height: 5px;
-    background-color: #ecf0f1;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    overflow: hidden;
+  .result-description {
+      font-size: 1rem;
   }
-  
-  .progress {
-    height: 100%;
-    background-color: #e74c3c;
-    transition: width 0.3s ease;
-  }
+}
