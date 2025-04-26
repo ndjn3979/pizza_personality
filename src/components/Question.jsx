@@ -1,43 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import questionsData from '../data/questions.json';
 import resultsData from '../data/results.json';
-/*This function component is responsible for rendering the 
-quiz questions and handling user interactions.*/
+import calculateResult from './Results'; // Calculates the best pizza match based on traits
+
 const QuestionRenderer = () => {
-  const questions = questionsData; //this line makes the quiz questions data accessible within the component.
+  // Load the questions and result templates from JSON files
+  const questions = questionsData;
+  const results = resultsData;
 
-  const results = resultsData; // this line makes the results data accessible within the component.
+  // Keeps track of which question the user is on
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-  /*This declares a state variable named currentQuestionIndex. 
-  It holds the index of the question that is currently being displayed to the user*/
-  /*This also declares a state setter function named setCurrentQuestionIndex. Its 
-  purpose is to update the value of the currentQuestionIndex state variable. 
-  When you call setCurrentQuestionIndex with a new value */
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); //initial value set to array index 0.
-  const [myResults, setmyResults] = useState([]);
-  
-  if (currentQuestionIndex >= questions.length) {
-    console.log('hitting the max out logic');
+  // Accumulates all traits selected by the user across answers
+  const [myResults, setMyResults] = useState([]);
+
+  // Flags when the quiz is complete
+  const [quizComplete, setQuizComplete] = useState(false);
+
+  // Holds the final pizza result object (name, description, traits)
+  const [result, setResult] = useState(null);
+
+  // 🔁 When the quiz is done, use the collected traits to find the best pizza match
+  useEffect(() => {
+    if (quizComplete && myResults.length > 0) {
+      const finalResult = calculateResult(myResults, results);
+      setResult(finalResult);
+    }
+  }, [quizComplete, myResults, results]);
+
+  // This function is called whenever the user clicks an answer
+  const quizOverFunction = (answer) => {
+    // Get the traits for the selected answer
+    const selectedResult = questions[currentQuestionIndex].options[answer];
+
+    // Add the traits to the accumulated results
+    setMyResults((prevResults) => [...prevResults, ...selectedResult]);
+
+    // If it's the last question, finish the quiz
+    if (currentQuestionIndex >= questions.length - 1) {
+      setQuizComplete(true);
+    } else {
+      // Otherwise, move to the next question
+      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    }
+  };
+
+  // ✅ Once the quiz is complete and result is ready, show it to the user
+  if (quizComplete && result) {
     return (
       <div className='end-message'>
         🎉 You've reached the end of the quiz!
-        <pre>{JSON.stringify(myResults, null, 2)}</pre>{' '}
-        {/* Optional debug output */}
+        <h2>Your Pizza Personality: {result.name}</h2>
+        <p>{result.description}</p>
+        <h4>Matching Traits:</h4>
+        <ul>
+          {result.traits.map((trait, index) => (
+            <li key={index}>{trait}</li>
+          ))}
+        </ul>
       </div>
     );
   }
 
-  const answersOnly = Object.keys(questions[currentQuestionIndex].options); //This line grabs an array of answer choices for the current question.
+  // Prevent rendering errors if current question is undefined
+  if (!questions[currentQuestionIndex]) return null;
 
-  const quizOverFunction = (answer) => {
-    console.log('hitting here');
-    const selectedResult = questions[currentQuestionIndex].options[answer]; //This line retrieves the result associated with the user's selected answer for the current question
-    setmyResults((prevResults) => [...prevResults, ...selectedResult]);
-    console.log('myResults', myResults);
-    console.log('selectedResult', selectedResult);
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1); //This line updates the currentQuestionIndex state, moving to the next question.
-  };
+  // Extract just the answer labels (e.g., ["Yes", "No", "Maybe"])
+  const answersOnly = Object.keys(questions[currentQuestionIndex].options);
 
+  // 👇 This is the normal quiz question screen
   return (
     <div className='question-card'>
       <div className='pizza-icon'>🍕</div>
@@ -57,7 +88,7 @@ const QuestionRenderer = () => {
             </div>
             
       <div className='question-container'>
-        <h2>Sample Question</h2>
+        <h2>Question {currentQuestionIndex + 1}</h2>
         <div className='question-text'>
           {questions[currentQuestionIndex].question}
         </div>
@@ -74,16 +105,8 @@ const QuestionRenderer = () => {
           ))}
         </div>
       </div>
-      
-
-      {/* Temporary JSON output - remove in production */}
-      Progress: {currentQuestionIndex + 1}/{questions.length}
     </div>
   );
 };
-
-// we need to return the values for the keys 'name' and 'description'
-// from the results data array based on the users accumalated answers in
-//the state variable myResults.
 
 export default QuestionRenderer;
