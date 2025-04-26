@@ -47,15 +47,67 @@ const QuestionRenderer = () => {
 
   // ✅ Once the quiz is complete and result is ready, show it to the user
   if (quizComplete && result) {
-    return (
-      <div className='end-message'>
-        🎉 You've reached the end of the quiz!
-        <h2>Your Pizza Personality: {result.name}</h2>
-        <p>{result.description}</p>
-        <h4>Matching Traits:</h4>
-        <ul>
+    return ( 
+      // Daniel - adding image tag for the results image + inline styling
+      // Made "description" and "traits" letters smaller via inline styling
+      <div className='end-message' style={{
+        height: '100vh',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        padding: '10px',
+        boxSizing: 'border-box'
+      }}>
+        {result.image && (
+          <img 
+            src={result.image} 
+            alt={result.name} 
+            style={{
+              maxWidth: '400px',
+              maxHeight: '300px',
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+              borderRadius: '10px',
+              margin: '10px auto',
+              display: 'block',
+              boxShadow: '0 3px 10px rgba(0, 0, 0, 0.1)'
+            }}
+          />
+        )}
+        <h3 style={{
+          marginTop: '5px'
+        }}>You are {result.name}!</h3>
+        <p style={{
+          fontSize: '0.9rem',
+          lineHeight: '1.4',
+          color: '#34495e',
+          maxWidth: '600px',
+          margin: '15px auto 6px auto',
+          padding: '0 10px',
+          whiteSpace: 'pre-wrap'
+        }}>{result.description}</p>
+        <h5 style={{
+          fontSize: '1rem',
+          marginTop: '16px',
+          marginBottom: '4px'
+        }}>Matching Traits:</h5>
+        <ul style={{
+          listStyle: 'none',
+          padding: 0,
+          margin: 0
+        }}>
           {result.traits.map((trait, index) => (
-            <li key={index}>{trait}</li>
+            <li key={index} style={{
+              backgroundColor: '#e74c3c',
+              color: 'white',
+              padding: '3px 15px',
+              borderRadius: '20px',
+              display: 'inline-block',
+              margin: '0px 6px',
+              fontSize: '0.85rem'
+            }}>{trait}</li>
           ))}
         </ul>
       </div>

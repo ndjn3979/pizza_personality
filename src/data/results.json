@@ -1,98 +1,117 @@
 [
   {
-    "name": "Plain Cheese",
+    "name": "a Plain Cheese Pizza",
     "traits": ["Reliable", "Minimalist", "Comfort-Seeker", "Old Soul"],
-    "description": "You are the warm hug everyone secretly craves. Steady, simple, and utterly timeless, you're the type of person who knows the value of cozy socks, a good book, and the right playlist on a rainy day. No frills, no drama — just pure, comforting reliability. Some might call you 'basic', but you know better: classics never go out of style. Your vibe is like a favorite old movie everyone wants to rewatch, even if they pretend they don’t."
+    "description": "You are the warm hug everyone secretly craves.\nNo frills, no drama — just pure, comforting reliability.\n\nSteady, simple, and utterly timeless,\nyou're the type of person who knows the value of\ncozy socks, a good book, and the right playlist on a rainy day.\n\nYour vibe is like a favorite old movie everyone wants to rewatch,\neven if they pretend they don't.\n\nSome might call you 'basic', but you know better:\nclassics never go out of style.",
+    "image": "../assets/images/cheese.png"
   },
   {
-    "name": "All Pepperoni",
+    "name": "an All Pepperoni Pizza",
     "traits": ["Bold", "Reliable", "Spicy", "Leader"],
-    "description": "You're the life of the party and the one making sure the party actually happens. Bold enough to grab the spotlight but grounded enough to keep your cool, you live life with just the right amount of spice. People trust you to show up, show out, and show everyone else how it's done. You’re a leader who doesn't just bark orders — you lead by being awesome. Also, you're probably the friend who texts 'we're leaving in 5' and actually means it."
+    "description": "You're the life of the party and the one making sure the party actually happens.\n\nBold enough to grab the spotlight\nbut grounded enough to keep your cool,\nyou live life with just the right amount of spice.\n\nPeople trust you to show up, show out, and show everyone else how it's done.\nYou're a leader who doesn't just bark orders — you lead by being awesome.\n\nAlso, you're probably the friend who texts\n'we're leaving in 5' and actually means it.",
+    "image": "../assets/images/pepperoni.png"
   },
   {
-    "name": "Supreme",
+    "name": "the Supreme Pizza",
     "traits": ["Leader", "Bold", "Adventurous", "Intellectual"],
-    "description": "You’re the ultimate multitasker: bold enough to take risks, smart enough to know which ones to take, and charismatic enough to make everyone think it was their idea. You thrive in the chaos, juggling a million toppings (uh, ideas) with grace. People come to you for advice, adventures, and spicy debates — and you deliver every time. Honestly, you’re probably president of at least three group chats and secretly running the show in a fourth."
+    "description": "You're the ultimate multitasker:\nbold enough to take risks, smart enough to know which ones to take,\nand charismatic enough to make everyone think it was their idea.\n\nYou thrive in the chaos, juggling a million toppings (uh, ideas) with grace.\nPeople come to you for advice, adventures, and spicy debates\n— and you deliver every time.\n\nHonestly, you're probably president of at least three group chats\nand secretly running the show in a fourth.",
+    "image": "../assets/images/supreme.png"
   },
   {
-    "name": "Meat Lover's",
+    "name": "the Meat Lover's Pizza",
     "traits": ["Chaotic", "Comfort-Seeker", "Bold", "Edgy"],
-    "description": "You live life on 'extra mode.' Your energy is contagious, your cravings are intense, and you have absolutely no chill — in the best way. Whether you're setting up an impromptu backyard BBQ or sending a 'u up?' text at 2 AM just to go get wings, you crave life's messy, meaty moments. You're an unapologetic maximalist who doesn’t believe in half-measures — and honestly? The world needs more of your feral gym-rat enthusiasm."
+    "description": "You live life on 'extra mode'.\n\nYour energy is contagious, your cravings are intense,\nand you have absolutely no chill — in the best way.\n\nWhether you're setting up an impromptu backyard BBQ\nor sending a 'u up?' text at 2 AM just to go get wings,\nyou crave life's messy, meaty moments.\n\nYou're an unapologetic maximalist who doesn't believe in half-measures — and honestly?\nThe world needs more of your feral gym-rat enthusiasm.",
+    "image": "../assets/images/meatlovers.jpg"
   },
   {
-    "name": "Hawaiian",
+    "name": "a Hawaiian Pizza",
     "traits": ["Rebel", "Sweet-Hearted", "Quirky", "Adventurous"],
-    "description": "You’re the unexpected sweet in a salty world. A rebel with a heart of gold, you know exactly who you are — and you’re not asking for permission. Whether you’re defending pineapple on pizza or wearing glitter socks to a 'business casual' meeting, you live your life with a mischievous wink and a ton of charm. People who get you really get you. Everyone else? They just wish they had your confidence."
+    "description": "You're the unexpected sweet in a salty world.\nA rebel with a heart of gold, you know exactly who you are\n— and you're not asking for permission.\n\nWhether you're defending pineapple on pizza\nor wearing glitter socks to a 'business casual' meeting,\nyou live your life with a mischievous wink and a ton of charm.\n\nPeople who get you really get you.\nEveryone else? They just wish they had your confidence.",
+    "image": "../assets/images/hawaiian.jpg"
   },
   {
-    "name": "Veggie Lover's",
+    "name": "the Veggie Lover's Pizza",
     "traits": ["Quirky", "Chill", "Sweet-Hearted", "Independent"],
-    "description": "You're the effortlessly cool friend who somehow knows all the best hiking spots, moon phases, and the latest TikTok food trends. You give off 'chill garden fairy' energy, floating from deep philosophical talks to memes about frogs without missing a beat. Your independence is your superpower — you don’t need anyone’s approval to vibe at your own frequency. Bonus points if you carry crystals 'just for fun' but secretly believe they’re working."
+    "description": "You're the effortlessly cool friend who somehow knows\nall the best hiking spots, moon phases, and the latest TikTok food trends.\n\nYou give off 'chill garden fairy' energy, floating from deep philosophical talks\nto memes about frogs without missing a beat.\n\nYour independence is your superpower —\nyou don't need anyone's approval to vibe at your own frequency.\n\nBonus points if you carry crystals 'just for fun'\nbut secretly believe they're working.",
+    "image": "../assets/images/veggielovers.png"
   },
   {
-    "name": "Margherita",
+    "name": "the Margherita Pizza",
     "traits": ["Chill", "Minimalist", "Intellectual", "Fancy"],
-    "description": "You're elegance without arrogance — the kind of person who makes simple look effortlessly stunning. You believe less is more, whether it's outfit choices, home decor, or your perfectly crafted texts that somehow say everything in just five words. You radiate art museum energy and could totally win a debate without even raising your voice. Basically, you're everyone's aspirational Pinterest board come to life."
+    "description": "You're elegance without arrogance — \nthe kind of person who makes simple look effortlessly stunning.\n\nYou believe less is more, whether it's outfit choices, home decor,\nor your perfectly crafted texts that somehow say everything in just five words.\nYou radiate art museum energy and could totally\nwin a debate without even raising your voice.\n\nBasically, you're everyone's aspirational Pinterest board come to life.",
+    "image": "../assets/images/margherita.png"
   },
   {
-    "name": "BBQ Chicken",
+    "name": "a BBQ Chicken Pizza",
     "traits": ["Bold", "Trendy", "Spicy", "Leader"],
-    "description": "You bring the heat and the hype. Confident without being cocky, you're the kind of person who’s always ahead of the trend — not because you’re trying, but because you are the vibe. You take big swings, live big stories, and somehow always pull it off. Your presence is magnetic: when you walk into a room, everyone feels it (and probably wishes they had your outfit). Also, your playlist? Immaculate."
+    "description": "You bring the heat and the hype.\n\nConfident without being cocky,\nyou're the kind of person who's always ahead of the trend —\nnot because you're trying, but because you are the vibe.\n\nYou take big swings, live big stories, and somehow always pull it off.\nYour presence is magnetic: when you walk into a room, everyone feels it\n(and probably wishes they had your outfit).\n\nAlso, your playlist?\nImmaculate.",
+    "image": "../assets/images/bbq.png"
   },
   {
-    "name": "Shrimp Scampi",
+    "name": "a Shrimp Scampi Pizza",
     "traits": ["Fancy", "Intellectual", "Trendy", "Independent"],
-    "description": "You give off quiet luxury energy — the kind of person who casually drops phrases like 'summering in the south of France' and actually means it. Whether you’re rocking vintage designer finds or flexing obscure trivia knowledge at brunch, you exude effortless sophistication with a hint of sass. You’re low-key intimidating (in a good way) because you know exactly who you are. People either want to be you, date you, or both."
+    "description": "You give off quiet luxury energy —\nthe kind of person who casually drops phrases like\n'summering in the south of France' and actually means it.\n\nWhether you're rocking vintage designer finds\nor flexing obscure trivia knowledge at brunch,\nyou exude effortless sophistication with a hint of sass.\n\nYou're low-key intimidating (in a good way)\nbecause you know exactly who you are.\nPeople either want to be you, date you, or both.",
+    "image": "../assets/images/shrimp.jpg"
   },
   {
-    "name": "White",
+    "name": "the White Pizza",
     "traits": ["Intellectual", "Minimalist", "Chill", "Old Soul"],
-    "description": "You’re a soft-spoken deep thinker who knows the magic of silence. You value late-night conversations under string lights, handwritten letters, and the smell of old bookstores. Friends come to you when they want real advice — not just 'good vibes' — because you tell it like it is, but gently. You may not say much at first, but when you do, it’s pure poetry. You’re basically the human equivalent of a cozy library on a rainy afternoon."
+    "description": "You're a soft-spoken deep thinker who knows the magic of silence.\n\nYou value late-night conversations under string lights,\nhandwritten letters, and the smell of old bookstores.\n\nFriends come to you when they want real advice — not just 'good vibes'\nbecause you tell it like it is, but gently.\nYou may not say much at first, but when you do, it's pure poetry.\n\nYou're basically the human equivalent of a cozy library on a rainy afternoon.",
+    "image": "../assets/images/white.jpg"
   },
   {
-    "name": "Pesto",
+    "name": "a Pesto Pizza",
     "traits": ["Quirky", "Fancy", "Trendy", "Sweet-Hearted"],
-    "description": "You’re a whimsical little storm cloud of creativity and charm. Somehow, you make wearing clashing patterns look intentional. You probably have a random hobby you’re weirdly good at (pottery? birdwatching? DJing?). People are drawn to your gentle weirdness like moths to a very stylish flame. You’re the friend who will show up to brunch with a handmade scarf and homemade sourdough starter — just because."
+    "description": "You're a whimsical little storm cloud of creativity and charm.\nSomehow, you make wearing clashing patterns look intentional.\n\nYou probably have a random hobby you're weirdly good at\n(pottery? birdwatching? DJing?).\nPeople are drawn to your gentle weirdness like moths to a very stylish flame.\n\nYou're the friend who will show up to brunch\nwith a handmade scarf and homemade sourdough starter — just because.",
+    "image": "../assets/images/pesto.png"
   },
   {
-    "name": "Cheesecake",
+    "name": "the Cheesecake Pizza",
     "traits": ["Sweet-Hearted", "Chaotic", "Comfort-Seeker", "Fancy"],
-    "description": "You are soft, sweet, and a little unhinged — a dangerous and iconic combination. One minute you're crying over a cute dog video, the next you're planning an impulsive road trip to a city you can’t even pronounce. You crave cozy moments but also dramatic flair: velvet robes, extra whipped cream, crying in the club energy. Basically, you are a dessert and a drama queen wrapped in one dangerously lovable package."
+    "description": "You are soft, sweet, and a little unhinged\n— a dangerous and iconic combination.\n\nOne minute you're crying over a cute dog video,\nthe next you're planning an impulsive road trip\nto a city you can't even pronounce.\n\nYou crave cozy moments but also dramatic flair:\nvelvet robes, extra whipped cream, crying in the club energy.\n\nBasically, you are a dessert and a drama queen\nwrapped in one dangerously lovable package.",
+    "image": "../assets/images/cheesecake.png"
   },
   {
-    "name": "Chocolate Oreo Pizza",
+    "name": "a Chocolate Oreo Pizza",
     "traits": ["Chaotic", "Sweet-Hearted", "Quirky", "Rebel"],
-    "description": "You are chaos incarnate — and somehow, it totally works. You’re the kind of person who would organize a surprise 2 AM karaoke night and get everyone to actually show up. Sweet-hearted but slightly feral, you radiate a 'gremlin with a heart of gold' vibe. Your meme game is unmatched, your impulsiveness is legendary, and your life motto might as well be: 'Why not?'"
+    "description": "You are chaos incarnate — and somehow, it totally works.\nSweet-hearted but slightly feral, you radiate a 'gremlin with a heart of gold' vibe.\n\nYou're the kind of person who would organize a surprise 2 AM karaoke night\nand get everyone to actually show up.\n\nYour meme game is unmatched, your impulsiveness is legendary,\nand your life motto might as well be: 'Why not?'",
+    "image": "../assets/images/oreo.jpg"
   },
   {
-    "name": "Apple Pie",
+    "name": "an Apple Pie Pizza",
     "traits": ["Old Soul", "Comfort-Seeker", "Sweet-Hearted", "Quirky"],
-    "description": "You’re cottagecore... but with a touch of chaos. You dream of slow mornings baking bread and tending a garden — but also lowkey wouldn't mind starting a weirdly wholesome cult where everyone just drinks tea and reads poetry. You have that rare kind of warmth that makes people instantly trust you. (And yes, if you ever started that cult, people would absolutely join.)"
+    "description": "You're cottagecore... but with a touch of chaos.\n\nYou dream of slow mornings baking bread and tending a garden —\nbut also lowkey wouldn't mind starting a weirdly wholesome cult\nwhere everyone just drinks tea and reads poetry.\n\nYou have that rare kind of warmth that makes people instantly trust you.\n(And yes, if you ever started that cult, people would absolutely join.)",
+    "image": "../assets/images/apple.jpg"
   },
   {
-    "name": "KBBQ Bulgogi + Sweet Potato Crust",
+    "name": "the Bulgogi & Sweet Potato Pizza",
     "traits": ["Trendy", "Adventurous", "Fancy", "Bold"],
-    "description": "You are the blueprint for cool. You thrive on fresh experiences, bold flavors, and spicy takes. You’re that friend who discovers underground restaurants, hidden speakeasies, and weird art exhibits — then casually drops them into conversation like it’s no big deal. You don’t just keep up with trends; you’re three steps ahead, sipping a matcha latte in shoes nobody else has even heard of yet."
+    "description": "You are the blueprint for cool.\nYou thrive on fresh experiences, bold flavors, and spicy takes.\n\nYou're that friend who discovers underground restaurants, hidden speakeasies,\nand weird art exhibits — then casually drops them into conversation like it's no big deal.\n\nYou don't just keep up with trends;\nyou're three steps ahead, sipping a matcha latte\nin shoes nobody else has even heard of yet.",
+    "image": "../assets/images/bulgogi.jpg"
   },
   {
-    "name": "Mac & Cheese Pizza",
+    "name": "a Mac & Cheese Pizza",
     "traits": ["Comfort-Seeker", "Chaotic", "Old Soul", "Quirky"],
-    "description": "You are pure, delicious comfort in human form. You live in oversized hoodies, carry snacks in your bag 'just in case,' and treat your bed like a sacred temple. You give off 'beloved cartoon character' energy: chaotic, endearing, and somehow always surrounded by cozy blankets. Your friends never know if you’re about to drop the best advice of their lives or start a chaotic game of Mario Kart at 1 AM — and honestly, that’s the magic."
+    "description": "You are pure, delicious comfort in human form.\nYou live in oversized hoodies, carry snacks in your bag 'just in case,'\nand treat your bed like a sacred temple.\n\nYou give off 'beloved cartoon character' energy:\nchaotic, endearing, and somehow always surrounded by cozy blankets.\n\nYour friends never know if you're about to drop the best advice of their lives\nor start a chaotic game of Mario Kart at 1 AM — and honestly, that's the magic.",
+    "image": "../assets/images/mac.png"
   },
   {
-    "name": "Mexican Pizza",
+    "name": "the Mexican Pizza",
     "traits": ["Spicy", "Adventurous", "Bold", "Chaotic"],
-    "description": "You are pure adrenaline wrapped in a tortilla of chaos. You live for late-night adventures, spontaneous road trips, and dance battles that may or may not end in minor injuries. You’re spicy — not just in your takes, but in your whole vibe. Wherever you go, the energy spikes. People either try (and fail) to keep up with you or just grab a margarita and enjoy the ride. If there’s a conga line forming somewhere... you probably started it."
+    "description": "You are pure adrenaline wrapped in a tortilla of chaos.\nYou live for late-night adventures, spontaneous road trips,\nand dance battles that may or may not end in minor injuries.\n\nYou're spicy — not just in your takes, but in your whole vibe.\nWherever you go, the energy spikes.\nPeople either try (and fail) to keep up with you\nor just grab a margarita and enjoy the ride.\n\nIf there's a conga line forming somewhere... you probably started it.",
+    "image": "../assets/images/mexican.jpg"
   },
   {
-    "name": "Anchovy Pizza",
+    "name": "an Anchovy Pizza",
     "traits": ["Edgy", "Independent", "Rebel", "Intellectual"],
-    "description": "You are the human version of an extremely controversial tweet: polarizing, provocative, and weirdly brilliant. You don’t just think outside the box — you set the box on fire, give a TED Talk about it, and then ghost everyone for three days to go read philosophy in a cabin. You’re sharp, unapologetically yourself, and secretly very tender under all that edgy armor. People either fear you, worship you, or desperately want your approval."
+    "description": "You are the human version of an extremely controversial tweet:\npolarizing, provocative, and weirdly brilliant.\n\nYou don't just think outside the box —\nyou set the box on fire, give a TED Talk about it,\nand then ghost everyone for three days to go read philosophy in a cabin.\n\nYou're sharp, unapologetically yourself, and secretly very tender under all that edgy armor. People either fear you, worship you, or desperately want your approval.",
+    "image": "../assets/images/anchovy.jpg"
   },
   {
-    "name": "Ricotta Garlic Pizza",
+    "name": "a Ricotta Garlic Pizza",
     "traits": ["Fancy", "Intellectual", "Sweet-Hearted", "Chill"],
-    "description": "You are elegance draped in a cozy blanket. You have major 'romantic main character in a European indie film' energy — slow sips of espresso, half-finished novels, barefoot strolls through art galleries. You’re soft-spoken but profound, tender but wise. Your idea of rebellion is falling in love at a farmer’s market and making garlic bread from scratch. You are, in a word, delicious."
+    "description": "You are elegance draped in a cozy blanket.\nYou have major 'romantic main character in a European indie film' energy —\nslow sips of espresso, half-finished novels, barefoot strolls through art galleries.\n\nYou're soft-spoken but profound, tender but wise.\nYour idea of rebellion is falling in love at a farmer's market\nand making garlic bread from scratch.\n\nYou are, in a word, delicious.",
+    "image": "../assets/images/ricotta.jpg"
   }
 ]
 
