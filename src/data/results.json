@@ -2,98 +2,99 @@
   {
     "name": "Plain Cheese",
     "traits": ["Reliable", "Minimalist", "Comfort-Seeker", "Old Soul"],
-    "description": "The minimalist. Quiet confidence, always dependable."
+    "description": "You are the warm hug everyone secretly craves. Steady, simple, and utterly timeless, you're the type of person who knows the value of cozy socks, a good book, and the right playlist on a rainy day. No frills, no drama — just pure, comforting reliability. Some might call you 'basic', but you know better: classics never go out of style. Your vibe is like a favorite old movie everyone wants to rewatch, even if they pretend they don’t."
   },
   {
     "name": "All Pepperoni",
     "traits": ["Bold", "Reliable", "Spicy", "Leader"],
-    "description": "Straightforward and bold. Doesn't overthink it, gets things done."
+    "description": "You're the life of the party and the one making sure the party actually happens. Bold enough to grab the spotlight but grounded enough to keep your cool, you live life with just the right amount of spice. People trust you to show up, show out, and show everyone else how it's done. You’re a leader who doesn't just bark orders — you lead by being awesome. Also, you're probably the friend who texts 'we're leaving in 5' and actually means it."
   },
   {
     "name": "Supreme",
     "traits": ["Leader", "Bold", "Adventurous", "Intellectual"],
-    "description": "The leader. Balanced, experienced, always has opinions."
+    "description": "You’re the ultimate multitasker: bold enough to take risks, smart enough to know which ones to take, and charismatic enough to make everyone think it was their idea. You thrive in the chaos, juggling a million toppings (uh, ideas) with grace. People come to you for advice, adventures, and spicy debates — and you deliver every time. Honestly, you’re probably president of at least three group chats and secretly running the show in a fourth."
   },
   {
     "name": "Meat Lover's",
     "traits": ["Chaotic", "Comfort-Seeker", "Bold", "Edgy"],
-    "description": "Gym bro energy. Possibly owns an air fryer and uses it aggressively."
+    "description": "You live life on 'extra mode.' Your energy is contagious, your cravings are intense, and you have absolutely no chill — in the best way. Whether you're setting up an impromptu backyard BBQ or sending a 'u up?' text at 2 AM just to go get wings, you crave life's messy, meaty moments. You're an unapologetic maximalist who doesn’t believe in half-measures — and honestly? The world needs more of your feral gym-rat enthusiasm."
   },
   {
     "name": "Hawaiian",
     "traits": ["Rebel", "Sweet-Hearted", "Quirky", "Adventurous"],
-    "description": "The sweet rebel. Hated by many, loved by the brave."
+    "description": "You’re the unexpected sweet in a salty world. A rebel with a heart of gold, you know exactly who you are — and you’re not asking for permission. Whether you’re defending pineapple on pizza or wearing glitter socks to a 'business casual' meeting, you live your life with a mischievous wink and a ton of charm. People who get you really get you. Everyone else? They just wish they had your confidence."
   },
   {
     "name": "Veggie Lover's",
     "traits": ["Quirky", "Chill", "Sweet-Hearted", "Independent"],
-    "description": "Eco-conscious. Probably knows their zodiac and your rising sign."
+    "description": "You're the effortlessly cool friend who somehow knows all the best hiking spots, moon phases, and the latest TikTok food trends. You give off 'chill garden fairy' energy, floating from deep philosophical talks to memes about frogs without missing a beat. Your independence is your superpower — you don’t need anyone’s approval to vibe at your own frequency. Bonus points if you carry crystals 'just for fun' but secretly believe they’re working."
   },
   {
     "name": "Margherita",
     "traits": ["Chill", "Minimalist", "Intellectual", "Fancy"],
-    "description": "Elegant and artsy. Values aesthetics and chill vibes."
+    "description": "You're elegance without arrogance — the kind of person who makes simple look effortlessly stunning. You believe less is more, whether it's outfit choices, home decor, or your perfectly crafted texts that somehow say everything in just five words. You radiate art museum energy and could totally win a debate without even raising your voice. Basically, you're everyone's aspirational Pinterest board come to life."
   },
   {
     "name": "BBQ Chicken",
     "traits": ["Bold", "Trendy", "Spicy", "Leader"],
-    "description": "Cool and confident with just a bit of a wild streak."
+    "description": "You bring the heat and the hype. Confident without being cocky, you're the kind of person who’s always ahead of the trend — not because you’re trying, but because you are the vibe. You take big swings, live big stories, and somehow always pull it off. Your presence is magnetic: when you walk into a room, everyone feels it (and probably wishes they had your outfit). Also, your playlist? Immaculate."
   },
   {
     "name": "Shrimp Scampi",
     "traits": ["Fancy", "Intellectual", "Trendy", "Independent"],
-    "description": "Unexpectedly fancy. Could be a secret millionaire or just pretends really well."
+    "description": "You give off quiet luxury energy — the kind of person who casually drops phrases like 'summering in the south of France' and actually means it. Whether you’re rocking vintage designer finds or flexing obscure trivia knowledge at brunch, you exude effortless sophistication with a hint of sass. You’re low-key intimidating (in a good way) because you know exactly who you are. People either want to be you, date you, or both."
   },
   {
     "name": "White",
     "traits": ["Intellectual", "Minimalist", "Chill", "Old Soul"],
-    "description": "Low-key intellectual. Likes candlelight, books, and chill playlists."
+    "description": "You’re a soft-spoken deep thinker who knows the magic of silence. You value late-night conversations under string lights, handwritten letters, and the smell of old bookstores. Friends come to you when they want real advice — not just 'good vibes' — because you tell it like it is, but gently. You may not say much at first, but when you do, it’s pure poetry. You’re basically the human equivalent of a cozy library on a rainy afternoon."
   },
   {
     "name": "Pesto",
     "traits": ["Quirky", "Fancy", "Trendy", "Sweet-Hearted"],
-    "description": "Quirky and underrated. Likes rainy days and funky socks."
+    "description": "You’re a whimsical little storm cloud of creativity and charm. Somehow, you make wearing clashing patterns look intentional. You probably have a random hobby you’re weirdly good at (pottery? birdwatching? DJing?). People are drawn to your gentle weirdness like moths to a very stylish flame. You’re the friend who will show up to brunch with a handmade scarf and homemade sourdough starter — just because."
   },
   {
     "name": "Cheesecake",
     "traits": ["Sweet-Hearted", "Chaotic", "Comfort-Seeker", "Fancy"],
-    "description": "Sweet but dramatic. Definitely has a Finsta."
+    "description": "You are soft, sweet, and a little unhinged — a dangerous and iconic combination. One minute you're crying over a cute dog video, the next you're planning an impulsive road trip to a city you can’t even pronounce. You crave cozy moments but also dramatic flair: velvet robes, extra whipped cream, crying in the club energy. Basically, you are a dessert and a drama queen wrapped in one dangerously lovable package."
   },
   {
     "name": "Chocolate Oreo Pizza",
     "traits": ["Chaotic", "Sweet-Hearted", "Quirky", "Rebel"],
-    "description": "Sugar-fueled chaos goblin. Posts memes at 3 AM."
+    "description": "You are chaos incarnate — and somehow, it totally works. You’re the kind of person who would organize a surprise 2 AM karaoke night and get everyone to actually show up. Sweet-hearted but slightly feral, you radiate a 'gremlin with a heart of gold' vibe. Your meme game is unmatched, your impulsiveness is legendary, and your life motto might as well be: 'Why not?'"
   },
   {
     "name": "Apple Pie",
     "traits": ["Old Soul", "Comfort-Seeker", "Sweet-Hearted", "Quirky"],
-    "description": "Cottagecore but unhinged. Bakes and starts cults."
+    "description": "You’re cottagecore... but with a touch of chaos. You dream of slow mornings baking bread and tending a garden — but also lowkey wouldn't mind starting a weirdly wholesome cult where everyone just drinks tea and reads poetry. You have that rare kind of warmth that makes people instantly trust you. (And yes, if you ever started that cult, people would absolutely join.)"
   },
   {
     "name": "KBBQ Bulgogi + Sweet Potato Crust",
     "traits": ["Trendy", "Adventurous", "Fancy", "Bold"],
-    "description": "Trendsetter. Eats fusion before it's cool."
+    "description": "You are the blueprint for cool. You thrive on fresh experiences, bold flavors, and spicy takes. You’re that friend who discovers underground restaurants, hidden speakeasies, and weird art exhibits — then casually drops them into conversation like it’s no big deal. You don’t just keep up with trends; you’re three steps ahead, sipping a matcha latte in shoes nobody else has even heard of yet."
   },
   {
     "name": "Mac & Cheese Pizza",
     "traits": ["Comfort-Seeker", "Chaotic", "Old Soul", "Quirky"],
-    "description": "Comfort gremlin. Brings a blanket everywhere."
+    "description": "You are pure, delicious comfort in human form. You live in oversized hoodies, carry snacks in your bag 'just in case,' and treat your bed like a sacred temple. You give off 'beloved cartoon character' energy: chaotic, endearing, and somehow always surrounded by cozy blankets. Your friends never know if you’re about to drop the best advice of their lives or start a chaotic game of Mario Kart at 1 AM — and honestly, that’s the magic."
   },
   {
     "name": "Mexican Pizza",
     "traits": ["Spicy", "Adventurous", "Bold", "Chaotic"],
-    "description": "Spicy, energetic, party starter. Probably DJ'ed a house party."
+    "description": "You are pure adrenaline wrapped in a tortilla of chaos. You live for late-night adventures, spontaneous road trips, and dance battles that may or may not end in minor injuries. You’re spicy — not just in your takes, but in your whole vibe. Wherever you go, the energy spikes. People either try (and fail) to keep up with you or just grab a margarita and enjoy the ride. If there’s a conga line forming somewhere... you probably started it."
   },
   {
     "name": "Anchovy Pizza",
     "traits": ["Edgy", "Independent", "Rebel", "Intellectual"],
-    "description": "Hot take personified. Either a genius or a menace."
+    "description": "You are the human version of an extremely controversial tweet: polarizing, provocative, and weirdly brilliant. You don’t just think outside the box — you set the box on fire, give a TED Talk about it, and then ghost everyone for three days to go read philosophy in a cabin. You’re sharp, unapologetically yourself, and secretly very tender under all that edgy armor. People either fear you, worship you, or desperately want your approval."
   },
   {
     "name": "Ricotta Garlic Pizza",
     "traits": ["Fancy", "Intellectual", "Sweet-Hearted", "Chill"],
-    "description": "Sensual introvert. Talks slow, thinks deep, cooks good pasta."
+    "description": "You are elegance draped in a cozy blanket. You have major 'romantic main character in a European indie film' energy — slow sips of espresso, half-finished novels, barefoot strolls through art galleries. You’re soft-spoken but profound, tender but wise. Your idea of rebellion is falling in love at a farmer’s market and making garlic bread from scratch. You are, in a word, delicious."
   }
 ]
+
 
    
