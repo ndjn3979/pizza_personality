@@ -20,6 +20,9 @@ const QuestionRenderer = () => {
   // Holds the final pizza result object (name, description, traits)
   const [result, setResult] = useState(null);
 
+  const [particles, setParticles] = useState([]);
+  const [confetti, setConfetti] = useState([]);
+
   // 🔁 When the quiz is done, use the collected traits to find the best pizza match
   useEffect(() => {
     if (quizComplete && myResults.length > 0) {
@@ -27,6 +30,35 @@ const QuestionRenderer = () => {
       setResult(finalResult);
     }
   }, [quizComplete, myResults, results]);
+
+  // Initialize pizza particles
+  useEffect(() => {
+    const pizzaIcons = ['🍕', '🍅', '🧀', '🌶️', '🍄', '🥓'];
+    const newParticles = Array(15).fill().map(() => ({
+      id: Math.random().toString(36).substr(2, 9),
+      icon: pizzaIcons[Math.floor(Math.random() * pizzaIcons.length)],
+      size: Math.random() * 20 + 10,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      animationDuration: Math.random() * 20 + 10
+    }));
+    setParticles(newParticles);
+  }, []);
+
+  // Initialize confetti when quiz completes
+  useEffect(() => {
+    if (quizComplete && result) {
+      const colors = ['#e74c3c', '#f39c12', '#2ecc71', '#3498db', '#9b59b6'];
+      const newConfetti = Array(50).fill().map(() => ({
+        id: Math.random().toString(36).substr(2, 9),
+        color: colors[Math.floor(Math.random() * colors.length)],
+        left: Math.random() * 100,
+        animationDuration: Math.random() * 3 + 2,
+        delay: Math.random() * 2
+      }));
+      setConfetti(newConfetti);
+    }
+  }, [quizComplete, result]);
 
   // This function is called whenever the user clicks an answer
   const quizOverFunction = (answer) => {
@@ -47,67 +79,29 @@ const QuestionRenderer = () => {
 
   // ✅ Once the quiz is complete and result is ready, show it to the user
   if (quizComplete && result) {
-    return ( 
-      // Daniel - adding image tag for the results image + inline styling
-      // Made "description" and "traits" letters smaller via inline styling
-      <div className='end-message' style={{
-        height: '100vh',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        padding: '10px',
-        boxSizing: 'border-box'
-      }}>
-        {result.image && (
-          <img 
-            src={result.image} 
-            alt={result.name} 
+    return (
+      <div className='end-message'>
+        {/* Confetti */}
+        {confetti.map(item => (
+          <div 
+            key={item.id}
+            className="confetti"
             style={{
-              maxWidth: '400px',
-              maxHeight: '300px',
-              width: '100%',
-              height: 'auto',
-              objectFit: 'cover',
-              borderRadius: '10px',
-              margin: '10px auto',
-              display: 'block',
-              boxShadow: '0 3px 10px rgba(0, 0, 0, 0.1)'
+              backgroundColor: item.color,
+              left: `${item.left}%`,
+              animationDuration: `${item.animationDuration}s`,
+              animationDelay: `${item.delay}s`
             }}
           />
-        )}
-        <h3 style={{
-          marginTop: '5px'
-        }}>You are {result.name}!</h3>
-        <p style={{
-          fontSize: '0.9rem',
-          lineHeight: '1.4',
-          color: '#34495e',
-          maxWidth: '600px',
-          margin: '15px auto 6px auto',
-          padding: '0 10px',
-          whiteSpace: 'pre-wrap'
-        }}>{result.description}</p>
-        <h5 style={{
-          fontSize: '1rem',
-          marginTop: '16px',
-          marginBottom: '4px'
-        }}>Matching Traits:</h5>
-        <ul style={{
-          listStyle: 'none',
-          padding: 0,
-          margin: 0
-        }}>
+        ))}
+        🎉 You've reached the end of the quiz!
+
+        <h2>Your Pizza Personality: {result.name}</h2>
+        <p>{result.description}</p>
+        <h4>Matching Traits:</h4>
+        <ul>
           {result.traits.map((trait, index) => (
-            <li key={index} style={{
-              backgroundColor: '#e74c3c',
-              color: 'white',
-              padding: '3px 15px',
-              borderRadius: '20px',
-              display: 'inline-block',
-              margin: '0px 6px',
-              fontSize: '0.85rem'
-            }}>{trait}</li>
+            <li key={index}>{trait}</li>
           ))}
         </ul>
       </div>
@@ -123,6 +117,22 @@ const QuestionRenderer = () => {
   // 👇 This is the normal quiz question screen
   return (
     <div className='question-card'>
+      {/* Background particles */}
+      {particles.map(particle => (
+        <div 
+          key={particle.id}
+          className="pizza-particle"
+          style={{
+            fontSize: `${particle.size}px`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
+            animationDuration: `${particle.animationDuration}s`
+          }}
+        >
+          {particle.icon}
+        </div>
+      ))}
+      
       <div className='pizza-icon'>🍕</div>
       <h1>
         {currentQuestionIndex === questions.length

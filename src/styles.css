@@ -7,19 +7,27 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f8f8;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffeef1 100%);
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
   padding: 20px;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #root {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 /* Header Styles */
@@ -41,6 +49,12 @@ h2 {
   display: inline-block;
 }
 
+h3 {
+  color: #2c3e50;
+  margin: 20px 0 10px;
+  font-size: 1.4rem;
+}
+
 /* Question Card Styles */
 .question-container {
   background-color: #fff9f9;
@@ -48,6 +62,8 @@ h2 {
   border-radius: 10px;
   margin-bottom: 20px;
   border-left: 5px solid #e74c3c;
+  position: relative;
+  overflow: hidden;
 }
 
 .question-text {
@@ -56,7 +72,7 @@ h2 {
   color: #34495e;
 }
 
-/* Answer Options Styles - Updated */
+/* Answer Options Styles */
 .answer-options {
   display: flex;
   flex-direction: column;
@@ -71,12 +87,15 @@ h2 {
   padding: 12px 20px;
   border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   border: none;
   font-size: 1rem;
   width: 100%;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .answer-option:hover {
@@ -85,37 +104,24 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* For the JSON output (temporary) */
-.json-output {
-  font-family: monospace;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #333;
+.answer-option::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
-/* Animation Styles */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.answer-option:hover::after {
+  transform: translateY(0);
 }
 
-.question-card {
-  animation: fadeIn 0.5s ease-out forwards;
-}
-
-/* Pizza-themed decorations */
-.pizza-icon {
-  display: block;
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: #e74c3c;
-}
-
-/* Progress indicator */
+/* Progress Bar */
 .progress-bar {
   height: 5px;
   background-color: #ecf0f1;
@@ -130,26 +136,150 @@ h2 {
   transition: width 0.3s ease;
 }
 
-/* End message styling */
+/* Pizza Icon */
+.pizza-icon {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #e74c3c;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Results Page Styles */
 .end-message {
   text-align: center;
   font-size: 1.5rem;
   padding: 30px;
   color: #e74c3c;
+  background: linear-gradient(135deg, rgba(231,76,60,0.1) 0%, rgba(255,255,255,0.8) 100%);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-card {
+  background-color: #fff9f9;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border-left: 5px solid #e74c3c;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.result-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.traits-list {
+  list-style-type: none;
+}
+
+.traits-list li {
+  background: rgba(231, 76, 60, 0.1);
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  animation: fadeIn 0.5s ease both;
+}
+
+.restart-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.question-card {
+  animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Particles and Confetti */
+.pizza-particle {
+  position: fixed;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100;
+  animation: fall linear infinite;
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
   
   .question-container {
-      padding: 20px;
+    padding: 20px;
   }
   
   .answer-options {
-      gap: 10px;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .end-message {
+    padding: 20px;
+  }
+  
+  .result-card {
+    padding: 20px;
+  }
+  
+  .result-description {
+    font-size: 1rem;
   }
 }
 
@@ -162,60 +292,4 @@ h2 {
 
 .answer-option:active {
   animation: pulse 0.3s ease;
-}
-/* Results Page Styles */
-.results-container {
-  margin-top: 30px;
-}
-
-.result-card {
-  background-color: #fff9f9;
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  border-left: 5px solid #e74c3c;
-  position: relative;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.result-card h2 {
-  color: #e74c3c;
-  margin-bottom: 15px;
-  border-bottom: none;
-}
-
-.result-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #34495e;
-}
-
-.pizza-icon.small {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  margin: 0;
-}
-
-.no-results {
-  text-align: center;
-  padding: 30px;
-  font-size: 1.2rem;
-  color: #7f8c8d;
-}
-
-.no-results p {
-  margin-bottom: 15px;
-}
-
-/* Add this to your existing media queries */
-@media (max-width: 600px) {
-  .result-card {
-      padding: 20px;
-  }
-  
-  .result-description {
-      font-size: 1rem;
-  }
 }
