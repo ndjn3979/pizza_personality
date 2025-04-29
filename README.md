@@ -98,3 +98,5 @@ Daniel
     - Updated results logic to fix a shaking issue + show previous CSS work by Daniel
     - Adjusted inline CSS further to fit the viewport better
     - Added a "Restart Quiz" button & functionality
+    - Added a "Share Results" button & functionality
+        - uses html2canvas library
