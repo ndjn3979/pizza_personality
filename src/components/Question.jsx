@@ -18,21 +18,21 @@ const QuestionRenderer = () => {
   // Accumulates all traits selected by the user across answers
   const [myResults, setMyResults] = useState([]);
 
-
   const [userName, setUserName] = useState('');
   
-
   // Flags when the quiz is complete
   const [quizComplete, setQuizComplete] = useState(false);
 
   // Holds the final pizza result object (name, description, traits)
   const [result, setResult] = useState(null);
 
+  // Checks if initial Popup is present
   const [isPopupOpen, setIsPopupOpen] = useState(true);
-
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
+
+  // Handles confetti and particles
   const [particles, setParticles] = useState([]);
   const [confetti, setConfetti] = useState([]);
 
@@ -102,6 +102,7 @@ const QuestionRenderer = () => {
   setQuizComplete(false);
   setResult(null);
   setConfetti([]); // Clear confetti
+  setIsPopupOpen(true); // Show the popup again when restarting
 };
 
 // Function to handle sharing results
@@ -371,6 +372,22 @@ const QuestionRenderer = () => {
       <PopupGfg open={isPopupOpen} onClose={handleClosePopup} setUserName={setUserName} />
 
       <div className='question-card'>
+        {/* Background particles */}
+        {particles.map(particle => (
+          <div 
+            key={particle.id}
+            className="pizza-particle"
+            style={{
+              fontSize: `${particle.size}px`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+              animationDuration: `${particle.animationDuration}s`
+            }}
+          >
+            {particle.icon}
+          </div>
+        ))}
+        
         <div className='pizza-icon'>🍕</div>
         <h1>
           {currentQuestionIndex === questions.length
@@ -378,54 +395,15 @@ const QuestionRenderer = () => {
             : 'Pizza Personality Test'}
         </h1>
         {/* fixed progress bar thin thin */}
-        <div className='progress-bar'>
-          <div
-            className='progress'
-            style={{
-              width: `${
-                ((currentQuestionIndex + 1) / questions.length) * 100
-              }%`,
-            }}
+        <div className="progress-bar">
+          <div 
+            className="progress" 
+            style={{ 
+              width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` 
+            }} 
           />
-    <div className='question-card'>
-      {/* Background particles */}
-      {particles.map(particle => (
-        <div 
-          key={particle.id}
-          className="pizza-particle"
-          style={{
-            fontSize: `${particle.size}px`,
-            left: `${particle.left}%`,
-            top: `${particle.top}%`,
-            animationDuration: `${particle.animationDuration}s`
-          }}
-        >
-          {particle.icon}
         </div>
-      ))}
-      
-      <div className='pizza-icon'>🍕</div>
-      <h1>
-        {currentQuestionIndex === questions.length
-          ? 'Your Pizza Personality Results 🍕'
-          : 'Pizza Personality Test'}
-      </h1>
-      {/* fixed progress bar thin thin */}
-      <div className="progress-bar">
-                <div 
-                    className="progress" 
-                    style={{ 
-                        width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` 
-                    }} 
-                />
-            </div>
             
-      <div className='question-container'>
-        <h2>Question {currentQuestionIndex + 1}</h2>
-        <div className='question-text'>
-          {questions[currentQuestionIndex].question}
-        </div>
-
         <div className='question-container'>
           <h2>Question {currentQuestionIndex + 1}</h2>
           <div className='question-text'>
