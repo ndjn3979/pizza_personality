@@ -53,3 +53,50 @@ Thin Thin
 Michal
 - Attempted refactor of dev environment tech for missing babel tech
 - Worked on Question.jsx
+
+4/26 Sat
+
+Daniel 
+- src/assets/images
+    - Added images for each quiz result
+- src/data/results/results.json
+    - Added image paths to each result
+    - Added descriptions to each result
+    - Tweaked descriptions spacing for better appearance
+- src/components/Question.jsx
+    - Added inline CSS for the results page
+- src/components/ResultTester.jsx
+- src/App_ResultTester.js
+    - Created an alternate version of the main component
+    - to test and help tweak how each result appears
+
+Michal
+- src/components/Question.jsx
+    - Added function to shift to the next question once an answer was chosen
+    - Added function to show final results once the quiz is completed
+
+Thin Thin
+- src/styles.css
+    - Fixed errors in the CSS
+    - Changed answer options to columns for neater and more organized appearance
+    - Imported CSS globally in App.js
+- src/components/Question.jsx
+    - Fixed progress bar
+
+4/28 Mon
+
+Thin Thin
+- src/styles.css
+    - Implemented Bootstrap library to CSS
+- src/components/Question.jsx
+    - Answers to questions - hover effect
+    - Results page - confetti effect
+
+Daniel
+- src/components/Question.jsx
+    - Merged Thin Thin's changes
+    - Updated results logic to fix a shaking issue + show previous CSS work by Daniel
+    - Adjusted inline CSS further to fit the viewport better
+    - Added a "Restart Quiz" button & functionality
+    - Added a "Share Results" button & functionality
+        - uses html2canvas library
