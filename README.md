@@ -81,4 +81,20 @@ Thin Thin
     - Changed answer options to columns for neater and more organized appearance
     - Imported CSS globally in App.js
 - src/components/Question.jsx
-    - fixed progress bar
+    - Fixed progress bar
+
+4/28 Mon
+
+Thin Thin
+- src/styles.css
+    - Implemented Bootstrap library to CSS
+- src/components/Question.jsx
+    - Answers to questions - hover effect
+    - Results page - confetti effect
+
+Daniel
+- src/components/Question.jsx
+    - Merged Thin Thin's changes
+    - Updated results logic to fix a shaking issue + show previous CSS work by Daniel
+    - Adjusted inline CSS further to fit the viewport better
+    - Added a "Restart Quiz" button & functionality
