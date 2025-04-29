@@ -4,6 +4,7 @@ import resultsData from '../data/results.json';
 import calculateResult from './Results'; // Calculates the best pizza match based on traits
 
 const QuestionRenderer = () => {
+  
   // Load the questions and result templates from JSON files
   const questions = questionsData;
   const results = resultsData;

@@ -1,78 +1,121 @@
-/* Reset and Base Styles */
+/* Pizza Personality Quiz CSS with Enhanced Dark Mode */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  /* Light Mode Colors */
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffeef1;
+  --text-primary: #333;
+  --text-secondary: #2c3e50;
+  --accent-color: #e74c3c;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(255, 255, 255, 0.3);
+  --question-bg: #fff9f9;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --progress-bg: #ecf0f1;
+  --trait-bg: rgba(231, 76, 60, 0.1);
+  --button-hover: #c0392b;
+  --button-text: white;
+  --pizza-color: #e74c3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Enhanced Dark Mode Colors */
+    --bg-primary: #2a2a2a;
+    --bg-secondary: #3a2d32;
+    --text-primary: #f8f8f8;
+    --text-secondary: #e6e6e6;
+    --accent-color: #ff8575;
+    --card-bg: rgba(60, 60, 60, 0.9);
+    --card-border: rgba(90, 90, 90, 0.5);
+    --question-bg: #3f3438;
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    --progress-bg: #4a4a4a;
+    --trait-bg: rgba(255, 133, 117, 0.15);
+    --button-hover: #ff6d5a;
+    --button-text: #ffffff;
+    --pizza-color: #ff8575;
+  }
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #ffeef1 100%);
-  color: #333;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
   padding: 20px;
   position: relative;
   overflow-x: hidden;
+  transition: background 0.5s ease, color 0.3s ease;
 }
 
 #root {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--card-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px var(--shadow-color);
+  border: 1px solid var(--card-border);
   position: relative;
   z-index: 1;
+  transition: all 0.5s ease;
 }
 
 /* Header Styles */
 h1 {
-  color: #e74c3c;
+  color: var(--accent-color);
   text-align: center;
   margin-bottom: 30px;
   font-size: 2.5rem;
   font-weight: 700;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px var(--shadow-color);
+  transition: color 0.3s ease;
 }
 
 h2 {
-  color: #2c3e50;
+  color: var(--text-secondary);
   margin-bottom: 15px;
   font-size: 1.8rem;
-  border-bottom: 2px solid #e74c3c;
+  border-bottom: 2px solid var(--accent-color);
   padding-bottom: 8px;
   display: inline-block;
 }
 
 h3 {
-  color: #2c3e50;
+  color: var(--text-secondary);
   margin: 20px 0 10px;
   font-size: 1.4rem;
 }
 
 /* Question Card Styles */
 .question-container {
-  background-color: #fff9f9;
+  background-color: var(--question-bg);
   padding: 25px;
   border-radius: 10px;
   margin-bottom: 20px;
-  border-left: 5px solid #e74c3c;
+  border-left: 5px solid var(--accent-color);
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 3px 6px var(--shadow-color);
 }
 
 .question-text {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #34495e;
+  color: var(--text-secondary);
 }
 
-/* Answer Options Styles */
+/* Answer Options */
 .answer-options {
   display: flex;
   flex-direction: column;
@@ -82,8 +125,8 @@ h3 {
 }
 
 .answer-option {
-  background-color: #e74c3c;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--button-text);
   padding: 12px 20px;
   border-radius: 25px;
   cursor: pointer;
@@ -92,16 +135,16 @@ h3 {
   font-size: 1rem;
   width: 100%;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px var(--shadow-color);
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
 .answer-option:hover {
-  background-color: #c0392b;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .answer-option::after {
@@ -124,7 +167,7 @@ h3 {
 /* Progress Bar */
 .progress-bar {
   height: 5px;
-  background-color: #ecf0f1;
+  background-color: var(--progress-bg);
   border-radius: 5px;
   margin-bottom: 30px;
   overflow: hidden;
@@ -132,7 +175,7 @@ h3 {
 
 .progress {
   height: 100%;
-  background-color: #e74c3c;
+  background-color: var(--accent-color);
   transition: width 0.3s ease;
 }
 
@@ -142,37 +185,38 @@ h3 {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 10px;
-  color: #e74c3c;
+  color: var(--pizza-color);
   animation: float 3s ease-in-out infinite;
 }
 
-/* Results Page Styles */
+/* Results Page */
 .end-message {
   text-align: center;
   font-size: 1.5rem;
   padding: 30px;
-  color: #e74c3c;
-  background: linear-gradient(135deg, rgba(231,76,60,0.1) 0%, rgba(255,255,255,0.8) 100%);
+  color: var(--accent-color);
+  background: linear-gradient(135deg, rgba(231,76,60,0.1) 0%, var(--card-bg) 100%);
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .result-card {
-  background-color: #fff9f9;
+  background-color: var(--question-bg);
   padding: 25px;
   border-radius: 10px;
   margin: 20px 0;
-  border-left: 5px solid #e74c3c;
+  border-left: 5px solid var(--accent-color);
   position: relative;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px var(--shadow-color);
   text-align: left;
 }
 
 .result-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #34495e;
+  color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
@@ -181,7 +225,7 @@ h3 {
 }
 
 .traits-list li {
-  background: rgba(231, 76, 60, 0.1);
+  background: var(--trait-bg);
   margin: 8px 0;
   padding: 10px 15px;
   border-radius: 20px;
@@ -189,8 +233,8 @@ h3 {
 }
 
 .restart-button {
-  background-color: #e74c3c;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--button-text);
   border: none;
   padding: 12px 25px;
   border-radius: 25px;
@@ -198,12 +242,14 @@ h3 {
   margin-top: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
+  margin: 30px auto 0;
 }
 
 .restart-button:hover {
-  background-color: #c0392b;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 /* Animations */
@@ -234,7 +280,7 @@ h3 {
   animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-/* Particles and Confetti */
+/* Decorative Elements */
 .pizza-particle {
   position: fixed;
   background-size: contain;
@@ -255,7 +301,26 @@ h3 {
   animation: fall linear infinite;
 }
 
-/* Responsive adjustments */
+/* Dark Mode Specific Tweaks */
+@media (prefers-color-scheme: dark) {
+  .answer-option::after {
+    background: linear-gradient(rgba(255,255,255,0.08), rgba(255,255,255,0.18));
+  }
+  
+  .pizza-particle {
+    opacity: 0.15;
+  }
+  
+  .end-message {
+    background: linear-gradient(135deg, rgba(255, 133, 117, 0.1) 0%, var(--card-bg) 100%);
+  }
+  
+  .question-container, .result-card {
+    background-color: rgba(70, 65, 67, 0.7);
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -272,6 +337,7 @@ h3 {
   
   .end-message {
     padding: 20px;
+    font-size: 1.3rem;
   }
   
   .result-card {
@@ -281,9 +347,13 @@ h3 {
   .result-description {
     font-size: 1rem;
   }
+  
+  #root {
+    padding: 15px;
+  }
 }
 
-/* Button click animation */
+/* Button Effects */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
@@ -292,4 +362,15 @@ h3 {
 
 .answer-option:active {
   animation: pulse 0.3s ease;
+}
+
+/* Smooth Mode Transition */
+* {
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Focus States for Accessibility */
+.answer-option:focus, .restart-button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
