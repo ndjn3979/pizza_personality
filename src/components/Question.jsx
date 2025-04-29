@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
+import PopupGfg from './UserPopup';
 import questionsData from '../data/questions.json';
 import resultsData from '../data/results.json';
 import calculateResult from './Results'; // Calculates the best pizza match based on traits
@@ -16,12 +18,21 @@ const QuestionRenderer = () => {
   // Accumulates all traits selected by the user across answers
   const [myResults, setMyResults] = useState([]);
 
+
+  const [userName, setUserName] = useState('');
+  
+
   // Flags when the quiz is complete
   const [quizComplete, setQuizComplete] = useState(false);
 
   // Holds the final pizza result object (name, description, traits)
   const [result, setResult] = useState(null);
 
+  const [isPopupOpen, setIsPopupOpen] = useState(true);
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
   const [particles, setParticles] = useState([]);
   const [confetti, setConfetti] = useState([]);
 
@@ -29,7 +40,7 @@ const QuestionRenderer = () => {
   const [isSharing, setIsSharing] = useState(false);
   const [shareImageUrl, setShareImageUrl] = useState('');
   const resultRef = useRef(null);
-
+  
   // 🔁 When the quiz is done, use the collected traits to find the best pizza match
   useEffect(() => {
     if (quizComplete && myResults.length > 0) {
@@ -173,6 +184,19 @@ const QuestionRenderer = () => {
 
   // ✅ Once the quiz is complete and result is ready, show it to the user
   if (quizComplete && result) {
+    //1.upon quizCompletion create a post request to the database ..post their pizza type
+    axios
+      .post('http://localhost:3001/PostPizza', {
+        userName: userName,
+        name: result.name,
+        traits: result.traits,
+        description: result.description,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => console.log(err));
+
     return (
         <div className='end-message' 
         ref={resultRef}
@@ -343,6 +367,26 @@ const QuestionRenderer = () => {
 
   // 👇 This is the normal quiz question screen
   return (
+    <div>
+      <PopupGfg open={isPopupOpen} onClose={handleClosePopup} setUserName={setUserName} />
+
+      <div className='question-card'>
+        <div className='pizza-icon'>🍕</div>
+        <h1>
+          {currentQuestionIndex === questions.length
+            ? 'Your Pizza Personality Results 🍕'
+            : 'Pizza Personality Test'}
+        </h1>
+        {/* fixed progress bar thin thin */}
+        <div className='progress-bar'>
+          <div
+            className='progress'
+            style={{
+              width: `${
+                ((currentQuestionIndex + 1) / questions.length) * 100
+              }%`,
+            }}
+          />
     <div className='question-card'>
       {/* Background particles */}
       {particles.map(particle => (
@@ -382,16 +426,23 @@ const QuestionRenderer = () => {
           {questions[currentQuestionIndex].question}
         </div>
 
-        <div className='answer-options'>
-          {answersOnly.map((answer, index) => (
-            <button
-              onClick={() => quizOverFunction(answer)}
-              key={index}
-              className='answer-option'
-            >
-              {answer}
-            </button>
-          ))}
+        <div className='question-container'>
+          <h2>Question {currentQuestionIndex + 1}</h2>
+          <div className='question-text'>
+            {questions[currentQuestionIndex].question}
+          </div>
+
+          <div className='answer-options'>
+            {answersOnly.map((answer, index) => (
+              <button
+                onClick={() => quizOverFunction(answer)}
+                key={index}
+                className='answer-option'
+              >
+                {answer}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
