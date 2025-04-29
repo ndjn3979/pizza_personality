@@ -5,6 +5,7 @@ import calculateResult from './Results'; // Calculates the best pizza match base
 import html2canvas from 'html2canvas'; // library for capturing DOM elements
 
 const QuestionRenderer = () => {
+  
   // Load the questions and result templates from JSON files
   const questions = questionsData;
   const results = resultsData;
