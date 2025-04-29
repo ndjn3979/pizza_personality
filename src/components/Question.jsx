@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import questionsData from '../data/questions.json';
 import resultsData from '../data/results.json';
 import calculateResult from './Results'; // Calculates the best pizza match based on traits
@@ -47,6 +48,18 @@ const QuestionRenderer = () => {
 
   // ✅ Once the quiz is complete and result is ready, show it to the user
   if (quizComplete && result) {
+    //1.upon quizCompletion create a post request to the database ..post their pizza type
+    axios
+      .post('http://localhost:3001/PostPizza', {
+        name: result.name,
+        traits: result.traits,
+        description: result.description,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => console.log(err));
+
     return (
       <div className='end-message'>
         🎉 You've reached the end of the quiz!
@@ -78,15 +91,15 @@ const QuestionRenderer = () => {
           : 'Pizza Personality Test'}
       </h1>
       {/* fixed progress bar thin thin */}
-      <div className="progress-bar">
-                <div 
-                    className="progress" 
-                    style={{ 
-                        width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` 
-                    }} 
-                />
-            </div>
-            
+      <div className='progress-bar'>
+        <div
+          className='progress'
+          style={{
+            width: `${((currentQuestionIndex + 1) / questions.length) * 100}%`,
+          }}
+        />
+      </div>
+
       <div className='question-container'>
         <h2>Question {currentQuestionIndex + 1}</h2>
         <div className='question-text'>
