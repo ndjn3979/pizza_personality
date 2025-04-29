@@ -176,7 +176,7 @@ const QuestionRenderer = () => {
         <div className='end-message' 
         ref={resultRef}
         style={{
-        height: '95vh',
+        height: 'auto',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
@@ -263,7 +263,7 @@ const QuestionRenderer = () => {
             onClick={handleShare}
             disabled={isSharing}
             style={{
-              backgroundColor: '#4a7e4e', // cheese color
+              backgroundColor: '#4a7e4e', // green pepper color
               color: 'white',
               border: 'none',
               borderRadius: '50px',
@@ -293,7 +293,7 @@ const QuestionRenderer = () => {
             }}
           >
             <span style={{ marginRight: '8px' }}>
-              {isSharing ? '⏳' : '📷'}
+              {isSharing ? '🫑' : '🌿'}
             </span>
             {isSharing ? 'Creating...' : 'Share Your Result!'}
           </button>
@@ -303,7 +303,7 @@ const QuestionRenderer = () => {
             id="restart-button" // Add ID for easy removal when sharing
             onClick={restartQuiz}
             style={{
-              backgroundColor: '#4b4237', // crust color
+              backgroundColor: '#4b4237', // black olive color
               color: 'white',
               border: 'none',
               borderRadius: '50px',
@@ -326,8 +326,8 @@ const QuestionRenderer = () => {
               e.currentTarget.style.boxShadow = '0 3px 10px rgba(0, 0, 0, 0.1)';
             }}
           >
-            <span style={{ marginRight: '8px' }}>🔄</span>
-            Take the Quiz Again
+            <span style={{ marginRight: '8px' }}>🫒</span>
+            Take the Quiz Again!
           </button>
         </div>
       </div>
