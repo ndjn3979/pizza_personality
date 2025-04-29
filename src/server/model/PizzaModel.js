@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const PizzaSchema = new mongoose.Schema({
+  userName: {type: String},
   name: { type: String },
   traits: { type: Array },
   description: { type: String }
