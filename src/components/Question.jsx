@@ -402,39 +402,8 @@ const QuestionRenderer = () => {
               width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` 
             }} 
           />
-      <div className='question-card'>
-        {/* Background particles */}
-        {particles.map(particle => (
-          <div 
-            key={particle.id}
-            className="pizza-particle"
-            style={{
-              fontSize: `${particle.size}px`,
-              left: `${particle.left}%`,
-              top: `${particle.top}%`,
-              animationDuration: `${particle.animationDuration}s`
-            }}
-          >
-            {particle.icon}
           </div>
-        ))}
-        
-        <div className='pizza-icon'>🍕</div>
-        <h1>
-          {currentQuestionIndex === questions.length
-            ? 'Your Pizza Personality Results 🍕'
-            : 'Pizza Personality Test'}
-        </h1>
-        {/* fixed progress bar thin thin */}
-        <div className="progress-bar">
-          <div 
-            className="progress" 
-            style={{ 
-              width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` 
-            }} 
-          />
-        </div>
-            
+      
         <div className='question-container'>
           <h2>Question {currentQuestionIndex + 1}</h2>
           <div className='question-text'>
@@ -453,8 +422,8 @@ const QuestionRenderer = () => {
             ))}
           </div>
         </div>
-      </div>
-    </div>
+        </div>
+        </div>
   );
 };
 
