@@ -192,12 +192,14 @@ const QuestionRenderer = () => {
   };
 
   // ✅ Once the quiz is complete and result is ready, show it to the user
+  
+  // Using axios, create a post request to the database and post their pizza type
+useEffect(() => {
   if (quizComplete && result) {
-    //1.upon quizCompletion create a post request to the database ..post their pizza type
     axios
       .post('http://localhost:3001/PostPizza', {
         userName: userName,
-        name: result.name,
+        result: result.name,
         traits: result.traits,
         description: result.description,
       })
@@ -205,7 +207,9 @@ const QuestionRenderer = () => {
         console.log(result);
       })
       .catch((err) => console.log(err));
+  }}, [quizComplete, result])
 
+  if (quizComplete && result) {
     return (
       <div className='end-message' 
         ref={resultRef}
@@ -258,7 +262,6 @@ const QuestionRenderer = () => {
         <p style={{
           fontSize: '0.85rem',
           lineHeight: '1.3',
-          //color: '#34495e',
           maxWidth: '600px',
           margin: '7px auto',
           padding: '0 10px',
@@ -267,6 +270,7 @@ const QuestionRenderer = () => {
         <h5 style={{
           fontSize: '1rem',
           margin: '7px auto',
+          color: '#e74c3c'
         }}>Matching Traits:</h5>
         <ul style={{
           listStyle: 'none',
@@ -385,7 +389,6 @@ const QuestionRenderer = () => {
   // Extract just the answer labels (e.g., ["Yes", "No", "Maybe"])
   const answersOnly = Object.keys(questions[currentQuestionIndex].options);
 
-  // 👇 This is the normal quiz question screen
   // 👇 This is the normal quiz question screen
   return (
     <div>

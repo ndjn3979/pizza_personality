@@ -17,7 +17,7 @@ export default function PopupGfg({ open, onClose, setUserName }) {
 
   // Inline styles
   const modalStyle = {
-    background: 'white',
+    background: '#000000',
     borderRadius: '8px',
     maxWidth: '400px',
     margin: 'auto',
@@ -33,7 +33,7 @@ export default function PopupGfg({ open, onClose, setUserName }) {
   };
 
   const buttonStyle = {
-    marginTop: '15px',
+    margin: '15px auto',
     padding: '8px 16px',
     backgroundColor: '#4a7e4e',
     color: 'white',
@@ -49,15 +49,18 @@ export default function PopupGfg({ open, onClose, setUserName }) {
         onClose={onClose} 
         modal 
         nested 
-        contentStyle={contentStyle}
-        overlayStyle={overlayStyle}
       >
         {(close) => (
           <div style={modalStyle}>
             <div
-              style={{ fontWeight: 'bold', fontSize: '1.2rem', color: 'black' }}
+              style={{ 
+                fontWeight: 'bold', 
+                fontSize: '1.2rem', 
+                color: 'white',
+                paddingTop: '20px'  
+              }}
             >
-              Welcome! What is your name?
+              What is your name?
             </div>
             <input
               type='text'
@@ -70,12 +73,6 @@ export default function PopupGfg({ open, onClose, setUserName }) {
               Submit
             </button>
             <br />
-            <button
-              onClick={close}
-              style={{ ...buttonStyle, backgroundColor: '#777' }}
-            >
-              Finish
-            </button>
           </div>
         )}
       </Popup>

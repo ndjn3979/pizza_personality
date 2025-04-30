@@ -2,9 +2,9 @@
   {
     "question": "Are you a morning or an evening person?",
     "options": {
-      "morning": ["Reliable", "Leader", "Intellectual"],
-      "evening": ["Bold", "Adventurous", "Rebel"],
-      "no preference": ["Chill", "Comfort-Seeker", "Independent"],
+      "Morning": ["Reliable", "Leader", "Intellectual"],
+      "Evening": ["Bold", "Adventurous", "Rebel"],
+      "No Preference": ["Chill", "Comfort-Seeker", "Independent"],
       "I don't sleep": ["Edgy", "Chaotic", "Quirky"]
     }
   },
@@ -18,7 +18,7 @@
     }
   },
   {
-    "question": "Sitting inside or outside?",
+    "question": "Date night! Sitting Inside or Outside?",
     "options": {
       "Outside - candles perfect a pizza night": ["Spicy", "Trendy", "Sweet-hearted"],
       "Inside - I want to smell the oil and the fire": ["Minimalist", "Intellectual", "Chill"],
@@ -39,7 +39,8 @@
     "question": "Hands or fork/knife?",
     "options": {
       "Hands all the way": ["Old Soul", "Reliable", "Comfort-Seeker"],
-      "fork/knife is necessary for this pizza": ["Fancy", "Rebel", "Intellectual"]
+      "Fork/knife is necessary for this pizza": ["Fancy", "Rebel", "Intellectual"],
+      "Someone else will feed me": ["Quirky", "Spicy", "Edgy"]
     }
   },
   {

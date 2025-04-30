@@ -33,14 +33,13 @@ db.on('connecting', () => {
   console.log('Connecting to MongoDB...');
 });
 app.post('/PostPizza', async (req, res) => {
-  //1.grab from the req.body the data
-  const { userName, name, traits, description } = req.body;
-  console.log('hitting this line');
+  // grab from the req.body the data
+  const { userName, result, traits, description } = req.body;
   try {
-    //create the new model with the data using the already set up schema
+    // create the new model with the data using the already set up schema
     const newPizza = new PizzaModel({
       userName,
-      name,
+      result,
       traits,
       description,
     });
