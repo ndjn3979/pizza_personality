@@ -16,9 +16,8 @@ const QuestionRenderer = () => {
 
   // Accumulates all traits selected by the user across answers
   const [myResults, setMyResults] = useState([]);
-
   const [userName, setUserName] = useState('');
-
+  
   // Flags when the quiz is complete
   const [quizComplete, setQuizComplete] = useState(false);
 
@@ -30,6 +29,7 @@ const QuestionRenderer = () => {
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
+  
   const [particles, setParticles] = useState([]);
   const [confetti, setConfetti] = useState([]);
 
@@ -203,8 +203,7 @@ const QuestionRenderer = () => {
       .catch((err) => console.log(err));
 
     return (
-      <div
-        className='end-message'
+      <div className='end-message' 
         ref={resultRef}
         style={{
           height: '95vh',
@@ -213,9 +212,8 @@ const QuestionRenderer = () => {
           flexDirection: 'column',
           justifyContent: 'flex-start',
           paddingTop: '10px',
-          boxSizing: 'border-box',
-        }}
-      >
+          boxSizing: 'border-box'
+        }}>
         {/* Confetti */}
         {confetti.map((item) => (
           <div
@@ -246,45 +244,31 @@ const QuestionRenderer = () => {
             }}
           />
         )}
-        <h3
-          style={{
-            margin: '7px auto',
-            textAlign: 'center',
-            zIndex: 2, // Ensures heading is above confetti
-            fontWeight: 'bold',
-            color: '#e74c3c',
-          }}
-        >
-          You are {result.name}!
-        </h3>
-        <p
-          style={{
-            fontSize: '0.85rem',
-            lineHeight: '1.3',
-            color: '#34495e',
-            maxWidth: '600px',
-            margin: '7px auto',
-            padding: '0 10px',
-            whiteSpace: 'pre-wrap',
-          }}
-        >
-          {result.description}
-        </p>
-        <h5
-          style={{
-            fontSize: '1rem',
-            margin: '7px auto',
-          }}
-        >
-          Matching Traits:
-        </h5>
-        <ul
-          style={{
-            listStyle: 'none',
-            padding: 0,
-            margin: 0,
-          }}
-        >
+        <h3 style={{
+          margin: '7px auto',
+          textAlign: 'center',
+          zIndex: 2, // Ensures heading is above confetti
+          fontWeight: 'bold',
+          color: '#e74c3c'
+        }}>You are {result.name}!</h3>
+        <p style={{
+          fontSize: '0.85rem',
+          lineHeight: '1.3',
+          //color: '#34495e',
+          maxWidth: '600px',
+          margin: '7px auto',
+          padding: '0 10px',
+          whiteSpace: 'pre-wrap'
+        }}>{result.description}</p>
+        <h5 style={{
+          fontSize: '1rem',
+          margin: '7px auto',
+        }}>Matching Traits:</h5>
+        <ul style={{
+          listStyle: 'none',
+          padding: 0,
+          margin: 0
+        }}>
           {result.traits.map((trait, index) => (
             <li
               key={index}
@@ -409,21 +393,20 @@ const QuestionRenderer = () => {
 
       <div className='question-card'>
         {/* Background particles */}
-        {particles.map((particle) => (
-          <div
+        {particles.map(particle => (
+          <div 
             key={particle.id}
-            className='pizza-particle'
+            className="pizza-particle"
             style={{
               fontSize: `${particle.size}px`,
               left: `${particle.left}%`,
               top: `${particle.top}%`,
-              animationDuration: `${particle.animationDuration}s`,
+              animationDuration: `${particle.animationDuration}s`
             }}
           >
             {particle.icon}
           </div>
         ))}
-
         <div className='pizza-icon'>🍕</div>
         <h1>
           {currentQuestionIndex === questions.length
@@ -431,17 +414,15 @@ const QuestionRenderer = () => {
             : 'Pizza Personality Test'}
         </h1>
         {/* fixed progress bar thin thin */}
-        <div className='progress-bar'>
-          <div
-            className='progress'
-            style={{
-              width: `${
-                ((currentQuestionIndex + 1) / questions.length) * 100
-              }%`,
-            }}
+        <div className="progress-bar">
+          <div 
+            className="progress" 
+            style={{ 
+              width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` 
+            }} 
           />
         </div>
-
+        
         <div className='question-container'>
           <h2>Question {currentQuestionIndex + 1}</h2>
           <div className='question-text'>
