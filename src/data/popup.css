@@ -1,0 +1,9 @@
+.my-custom-popup-container {
+    width: 300px !important; /* Try !important if needed to override library styles */
+    /* You can also use max-width here */
+  }
+  
+  .popup-content { /* You might need to style this as well */
+    width: inherit !important; /* Make the content inherit the popup's width */
+    max-width: inherit !important;
+  }

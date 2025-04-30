@@ -1,33 +1,45 @@
 import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import '../data/popup.css';
 
 export default function PopupGfg({ open, onClose, setUserName }) {
-  // track and manage user provided name from to start of quiz.
   const [typedUpUser, setTypeUser] = useState('');
 
-  // to grab the name created by the user to later return store with results in database.
   const userNameCreater = () => {
     setUserName(typedUpUser);
     onClose();
   };
-  // handles the input changing in the pop up text box.
+
   const handleInputChange = (event) => {
     setTypeUser(event.target.value);
   };
 
-  const contentStyle = {
+  // Inline styles
+  const modalStyle = {
     background: 'white',
-    width: '300px',
-    padding: '20px',
-    borderRadius: '10px',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+    borderRadius: '8px',
+    maxWidth: '400px',
+    margin: 'auto',
     textAlign: 'center',
-    border: '1px solid #e0e0e0'
   };
 
-  const overlayStyle = {
-    background: 'rgba(0, 0, 0, 0.5)'
+  const inputStyle = {
+    marginTop: '10px',
+    padding: '8px',
+    width: '80%',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+  };
+
+  const buttonStyle = {
+    marginTop: '15px',
+    padding: '8px 16px',
+    backgroundColor: '#4a7e4e',
+    color: 'white',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
   };
 
   return (
@@ -41,22 +53,29 @@ export default function PopupGfg({ open, onClose, setUserName }) {
         overlayStyle={overlayStyle}
       >
         {(close) => (
-          <div className='modal'>
-            <div className='content' style={{ 
-            fontSize: '24px', 
-            fontWeight: 'bold', 
-            marginBottom: '20px',
-            color: '#e74c3c'
-          }}>Welcome What is your name?</div>
+          <div style={modalStyle}>
+            <div
+              style={{ fontWeight: 'bold', fontSize: '1.2rem', color: 'black' }}
+            >
+              Welcome! What is your name?
+            </div>
             <input
               type='text'
               value={typedUpUser}
               onChange={handleInputChange}
+              style={inputStyle}
             />
-            <button onClick={userNameCreater}>Submit</button>
-            <div>
-              <button onClick={close}>Close modal</button>
-            </div>
+            <br />
+            <button onClick={userNameCreater} style={buttonStyle} >
+              Submit
+            </button>
+            <br />
+            <button
+              onClick={close}
+              style={{ ...buttonStyle, backgroundColor: '#777' }}
+            >
+              Finish
+            </button>
           </div>
         )}
       </Popup>
